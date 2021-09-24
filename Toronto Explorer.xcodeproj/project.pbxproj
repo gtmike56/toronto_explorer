@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74305BC726F9353400F4183D /* NewPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74305BC626F9353400F4183D /* NewPlaces.swift */; };
+		7435A86E26FA4FBE0013204D /* PopularPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435A86D26FA4FBE0013204D /* PopularPlacesViewModel.swift */; };
+		745ACC8026EBA2AE00248E36 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745ACC7F26EBA2AE00248E36 /* PlaceView.swift */; };
+		745FAB6626CFFED0008903E9 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6526CFFED0008903E9 /* ActivityIndicatorView.swift */; };
+		745FAB6826D00FBA008903E9 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6726D00FBA008903E9 /* URLImage.swift */; };
+		745FAB6B26D012B4008903E9 /* CategoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6A26D012B4008903E9 /* CategoryDetailsView.swift */; };
+		745FAB6D26D012C4008903E9 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6C26D012C4008903E9 /* PlacesViewModel.swift */; };
+		745FAB6F26D012F2008903E9 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6E26D012F2008903E9 /* Place.swift */; };
+		745FAB7326D02BCE008903E9 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB7226D02BCE008903E9 /* NavigationLazyView.swift */; };
+		746A93B626CD526F0090886E /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A93B526CD526F0090886E /* CategoriesView.swift */; };
+		746A93B826CD528F0090886E /* PopularPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A93B726CD528F0090886E /* PopularPlacesView.swift */; };
+		746A93BA26CD52A50090886E /* PopularEatPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A93B926CD52A50090886E /* PopularEatPlacesView.swift */; };
+		746A93C026CD5C670090886E /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A93BF26CD5C670090886E /* Modifiers.swift */; };
+		7499161A26F684650070BA88 /* PhotosGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7499161926F684650070BA88 /* PhotosGridView.swift */; };
+		7499161E26F6A1590070BA88 /* ImagesCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7499161D26F6A1590070BA88 /* ImagesCarouselView.swift */; };
+		74B5B9DF26F155E700DBCF8D /* PlaceViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B5B9DE26F155E700DBCF8D /* PlaceViewHeader.swift */; };
+		74BBA81426CB2C91005C03FF /* Toronto_ExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BBA81326CB2C91005C03FF /* Toronto_ExplorerApp.swift */; };
+		74BBA81626CB2C91005C03FF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BBA81526CB2C91005C03FF /* HomeView.swift */; };
+		74BBA81826CB2C92005C03FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74BBA81726CB2C92005C03FF /* Assets.xcassets */; };
+		74BBA81B26CB2C92005C03FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74BBA81A26CB2C92005C03FF /* Preview Assets.xcassets */; };
+		74BBA82226CB386D005C03FF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BBA82126CB386D005C03FF /* Category.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		74305BC626F9353400F4183D /* NewPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaces.swift; sourceTree = "<group>"; };
+		7435A86D26FA4FBE0013204D /* PopularPlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPlacesViewModel.swift; sourceTree = "<group>"; };
+		744F2AD826F2D98D0031C0C3 /* Toronto-Explorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Toronto-Explorer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		745ACC7F26EBA2AE00248E36 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
+		745FAB6526CFFED0008903E9 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		745FAB6726D00FBA008903E9 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		745FAB6A26D012B4008903E9 /* CategoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsView.swift; sourceTree = "<group>"; };
+		745FAB6C26D012C4008903E9 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
+		745FAB6E26D012F2008903E9 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		745FAB7226D02BCE008903E9 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
+		746A93B526CD526F0090886E /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		746A93B726CD528F0090886E /* PopularPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPlacesView.swift; sourceTree = "<group>"; };
+		746A93B926CD52A50090886E /* PopularEatPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularEatPlacesView.swift; sourceTree = "<group>"; };
+		746A93BF26CD5C670090886E /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		7499161926F684650070BA88 /* PhotosGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosGridView.swift; sourceTree = "<group>"; };
+		7499161D26F6A1590070BA88 /* ImagesCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCarouselView.swift; sourceTree = "<group>"; };
+		74B5B9DE26F155E700DBCF8D /* PlaceViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewHeader.swift; sourceTree = "<group>"; };
+		74BBA81026CB2C91005C03FF /* Toronto Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toronto Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74BBA81326CB2C91005C03FF /* Toronto_ExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toronto_ExplorerApp.swift; sourceTree = "<group>"; };
+		74BBA81526CB2C91005C03FF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		74BBA81726CB2C92005C03FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74BBA81A26CB2C92005C03FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74BBA82126CB386D005C03FF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74BBA80D26CB2C91005C03FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		745FAB6426CFFEBD008903E9 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				745FAB6526CFFED0008903E9 /* ActivityIndicatorView.swift */,
+				74B5B9DE26F155E700DBCF8D /* PlaceViewHeader.swift */,
+				7499161D26F6A1590070BA88 /* ImagesCarouselView.swift */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		745FAB7126D01E5C008903E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				745FAB6C26D012C4008903E9 /* PlacesViewModel.swift */,
+				7435A86D26FA4FBE0013204D /* PopularPlacesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		746A93B426CD51920090886E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74BBA81526CB2C91005C03FF /* HomeView.swift */,
+				746A93B526CD526F0090886E /* CategoriesView.swift */,
+				746A93B726CD528F0090886E /* PopularPlacesView.swift */,
+				746A93B926CD52A50090886E /* PopularEatPlacesView.swift */,
+				745ACC7F26EBA2AE00248E36 /* PlaceView.swift */,
+				745FAB6A26D012B4008903E9 /* CategoryDetailsView.swift */,
+				7499161926F684650070BA88 /* PhotosGridView.swift */,
+				74305BC626F9353400F4183D /* NewPlaces.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		746A93BD26CD59FC0090886E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74BBA82126CB386D005C03FF /* Category.swift */,
+				745FAB6E26D012F2008903E9 /* Place.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		746A93BE26CD5C520090886E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				746A93BF26CD5C670090886E /* Modifiers.swift */,
+				745FAB6726D00FBA008903E9 /* URLImage.swift */,
+				745FAB7226D02BCE008903E9 /* NavigationLazyView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		74BBA80726CB2C91005C03FF = {
+			isa = PBXGroup;
+			children = (
+				74BBA81226CB2C91005C03FF /* Toronto Explorer */,
+				74BBA81126CB2C91005C03FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74BBA81126CB2C91005C03FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74BBA81026CB2C91005C03FF /* Toronto Explorer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74BBA81226CB2C91005C03FF /* Toronto Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				746A93BD26CD59FC0090886E /* Models */,
+				745FAB7126D01E5C008903E9 /* ViewModels */,
+				746A93BE26CD5C520090886E /* Helpers */,
+				745FAB6426CFFEBD008903E9 /* UIViews */,
+				746A93B426CD51920090886E /* Views */,
+				744F2AD826F2D98D0031C0C3 /* Toronto-Explorer-Info.plist */,
+				74BBA81326CB2C91005C03FF /* Toronto_ExplorerApp.swift */,
+				74BBA81726CB2C92005C03FF /* Assets.xcassets */,
+				74BBA81926CB2C92005C03FF /* Preview Content */,
+			);
+			path = "Toronto Explorer";
+			sourceTree = "<group>";
+		};
+		74BBA81926CB2C92005C03FF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				74BBA81A26CB2C92005C03FF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74BBA80F26CB2C91005C03FF /* Toronto Explorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74BBA81E26CB2C92005C03FF /* Build configuration list for PBXNativeTarget "Toronto Explorer" */;
+			buildPhases = (
+				74BBA80C26CB2C91005C03FF /* Sources */,
+				74BBA80D26CB2C91005C03FF /* Frameworks */,
+				74BBA80E26CB2C91005C03FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Toronto Explorer";
+			productName = "Toronto Explorer";
+			productReference = 74BBA81026CB2C91005C03FF /* Toronto Explorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74BBA80826CB2C91005C03FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					74BBA80F26CB2C91005C03FF = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 74BBA80B26CB2C91005C03FF /* Build configuration list for PBXProject "Toronto Explorer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74BBA80726CB2C91005C03FF;
+			productRefGroup = 74BBA81126CB2C91005C03FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74BBA80F26CB2C91005C03FF /* Toronto Explorer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74BBA80E26CB2C91005C03FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74BBA81B26CB2C92005C03FF /* Preview Assets.xcassets in Resources */,
+				74BBA81826CB2C92005C03FF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74BBA80C26CB2C91005C03FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7499161A26F684650070BA88 /* PhotosGridView.swift in Sources */,
+				74305BC726F9353400F4183D /* NewPlaces.swift in Sources */,
+				745FAB6D26D012C4008903E9 /* PlacesViewModel.swift in Sources */,
+				74BBA81626CB2C91005C03FF /* HomeView.swift in Sources */,
+				745FAB6826D00FBA008903E9 /* URLImage.swift in Sources */,
+				746A93B626CD526F0090886E /* CategoriesView.swift in Sources */,
+				74B5B9DF26F155E700DBCF8D /* PlaceViewHeader.swift in Sources */,
+				746A93C026CD5C670090886E /* Modifiers.swift in Sources */,
+				746A93BA26CD52A50090886E /* PopularEatPlacesView.swift in Sources */,
+				7499161E26F6A1590070BA88 /* ImagesCarouselView.swift in Sources */,
+				745FAB6626CFFED0008903E9 /* ActivityIndicatorView.swift in Sources */,
+				745FAB6F26D012F2008903E9 /* Place.swift in Sources */,
+				745FAB6B26D012B4008903E9 /* CategoryDetailsView.swift in Sources */,
+				74BBA81426CB2C91005C03FF /* Toronto_ExplorerApp.swift in Sources */,
+				74BBA82226CB386D005C03FF /* Category.swift in Sources */,
+				746A93B826CD528F0090886E /* PopularPlacesView.swift in Sources */,
+				745FAB7326D02BCE008903E9 /* NavigationLazyView.swift in Sources */,
+				7435A86E26FA4FBE0013204D /* PopularPlacesViewModel.swift in Sources */,
+				745ACC8026EBA2AE00248E36 /* PlaceView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		74BBA81C26CB2C92005C03FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		74BBA81D26CB2C92005C03FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74BBA81F26CB2C92005C03FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Toronto Explorer/Preview Content\"";
+				DEVELOPMENT_TEAM = N3VR78HJDU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Toronto-Explorer-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mikhailudotov.Toronto-Explorer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		74BBA82026CB2C92005C03FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Toronto Explorer/Preview Content\"";
+				DEVELOPMENT_TEAM = N3VR78HJDU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Toronto-Explorer-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mikhailudotov.Toronto-Explorer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74BBA80B26CB2C91005C03FF /* Build configuration list for PBXProject "Toronto Explorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74BBA81C26CB2C92005C03FF /* Debug */,
+				74BBA81D26CB2C92005C03FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74BBA81E26CB2C92005C03FF /* Build configuration list for PBXNativeTarget "Toronto Explorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74BBA81F26CB2C92005C03FF /* Debug */,
+				74BBA82026CB2C92005C03FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74BBA80826CB2C91005C03FF /* Project object */;
+}
