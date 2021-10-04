@@ -9,7 +9,6 @@ import SwiftUI
 import MapKit
 
 struct PlaceView: View {
-    
     let place: Place
     let anotations: [Annotation]
     
@@ -24,30 +23,24 @@ struct PlaceView: View {
     
     var body: some View {
         ScrollView {
-            
             if place.cuisine == nil {
-                PlaceViewHeader(place: place)
+                ImagesCarouselView(place: place, selectedImageIndex: 0)
                     .frame(height: 280)
             } else {
                 ZStack(alignment: .bottomLeading) {
                     URLImage(place.thumbnail)
                         .scaledToFill()
-                    LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .center, endPoint: .bottom)
+                    LinearGradient(gradient: Gradient(colors: Palette.GradientPalette.restaurandHeader), startPoint: .center, endPoint: .bottom)
                     HStack {
                         VStack(alignment: .leading) {
                             Text(place.name)
                                 .foregroundColor(.white)
-                                .font(.system(size: 18, weight: .bold))
+                                .font(Palette.PlaceViewPalette.Fonts.title)
                             HStack(spacing: 1) {
                                 ForEach(0..<Int(place.rating.rounded()), id: \.self) { num in
                                     Image(systemName: "star.fill")
                                         .foregroundColor(.orange)
                                 }
-//                                Text("\(place.rating, specifier: "%.1f")")
-//                                    .padding(.leading, 10)
-//                                    .padding(.top, 3)
-//                                    .font(.system(size: 18, weight: .medium))
-//                                    .foregroundColor(.white)
                             }
                         }
                         .padding()
@@ -55,29 +48,26 @@ struct PlaceView: View {
                         NavigationLink(destination: PhotosGridView(place: place)) {
                             Text("See more photos")
                                 .foregroundColor(Color.white)
-                                .font(.system(size: 16, weight: .regular))
-                                .frame(width: 80) //the only way to make the restaurant name be in one line
+                                .font(Palette.PlaceViewPalette.Fonts.description)
+                                .frame(width: 80)
                         }
                     }
                 }
             }
-           
+            
             VStack(alignment: .leading, spacing: 10) {
                 if place.cuisine == nil {
                     Text(place.name)
-                        .font(.system(size: 20, weight: .semibold))
+                        .font(Palette.PlaceViewPalette.Fonts.title)
                     HStack(spacing: 1) {
                         ForEach(0..<Int(place.rating.rounded()), id: \.self) { num in
                             Image(systemName: "star.fill")
                                 .foregroundColor(.orange)
                         }
-//                        Text("\(place.rating, specifier: "%.1f")")
-//                            .padding(.leading, 10)
-//                            .padding(.top, 3)
-//                            .font(.system(size: 18, weight: .medium))
                     }
                 }
                 Text(place.description)
+                    .font(Palette.PlaceViewPalette.Fonts.description)
                 
                 HStack {
                     Spacer()
@@ -86,25 +76,23 @@ struct PlaceView: View {
             
             HStack() {
                 Text("Location")
-                    .font(.system(size: 20, weight: .semibold))
-                
+                    .font(Palette.PlaceViewPalette.Fonts.title)
                 Spacer()
-                
                 Button {
                     isShowingPin.toggle()
                 } label: {
                     Text("\(isShowingPin ? "Hide" : "Show") Mark")
                         .foregroundColor(Color.primary)
-                        .font(.system(size: 16, weight: .semibold))
+                        .font(Palette.PlaceViewPalette.Fonts.title)
                 }
                 Toggle("", isOn: $isShowingPin)
                     .labelsHidden()
-
+                
             }.padding(.horizontal)
             Button {
                 if let url = URL(string: "maps://?saddr=&daddr=\(place.latitude),\(place.longitude)") {
                     if UIApplication.shared.canOpenURL(url) {
-                          UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
                     }
                 }
                 
@@ -114,7 +102,6 @@ struct PlaceView: View {
                 })
                     .frame(height: 250)
             }
-
         }.navigationBarTitle(place.name, displayMode: .inline)
     }
 }
@@ -128,7 +115,7 @@ struct Annotation: Identifiable {
 
 struct PlaceView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceView(place: .init(name: "Borscht", thumbnail: "cntower", description: "Test Description \n\n\n Yay", category: "Test", latitude: 43.642567, longitude: -79.387054, rating: 3.5, photos: [], cuisine: "Ukranian"))
+        PlaceView(place: .init(name: "Borscht", thumbnail: "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg", description: "Test Description \n\n\n Yay \n\n\n\n\n Test", category: "Test", latitude: 43.642567, longitude: -79.387054, rating: 3.5, photos: ["https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png", "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg"], cuisine: "Ukranian"))
         HomeView()
     }
 }

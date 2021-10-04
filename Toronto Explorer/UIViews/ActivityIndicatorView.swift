@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ActivityIndicatorView: UIViewRepresentable {
-    
     typealias UIViewType = UIActivityIndicatorView
     
     func makeUIView(context: Context) -> UIActivityIndicatorView {
@@ -17,8 +16,5 @@ struct ActivityIndicatorView: UIViewRepresentable {
         return activityView
     }
     
-    func updateUIView(_ uiView: UIActivityIndicatorView, context: Context) {
-        
-    }
-    
+    func updateUIView(_ uiView: UIActivityIndicatorView, context: Context) {}
 }

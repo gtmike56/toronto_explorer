@@ -7,44 +7,35 @@
 
 import SwiftUI
 
-
 struct HomeView: View {
-
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [
             .foregroundColor: UIColor.init(white: 0.96, alpha: 1)
-                
         ]
     }
     
     var body: some View {
         NavigationView {
-            
             ZStack {
+                LinearGradient(colors: Palette.GradientPalette.appBackground, startPoint: .top, endPoint: .bottom).ignoresSafeArea()
                 
-                LinearGradient(colors: [.red, .yellow], startPoint: .top, endPoint: .bottom).ignoresSafeArea()
-                
-                Color("appBackground")
+                Palette.HomeScreenPalette.Colors.appBackgroud
                     .offset(y: 300)
                 
                 ScrollView {
-                    
                     CategoriesView()
                     
                     VStack {
                         PopularPlacesView()
                         PopularEatPlacesView()
                         NewPlaces()
-                    }.background(Color("appBackground"))
+                    }.background(Palette.HomeScreenPalette.Colors.appBackgroud)
                         .cornerRadius(15)
                         .padding(.top, 25)
-                           
                 }
                 .navigationBarTitle("Toronto Explorer", displayMode: .large)
             }
-            
         }
-        
     }
 }
 

@@ -11,7 +11,7 @@
 		7435A86E26FA4FBE0013204D /* PopularPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435A86D26FA4FBE0013204D /* PopularPlacesViewModel.swift */; };
 		745ACC8026EBA2AE00248E36 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745ACC7F26EBA2AE00248E36 /* PlaceView.swift */; };
 		745FAB6626CFFED0008903E9 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6526CFFED0008903E9 /* ActivityIndicatorView.swift */; };
-		745FAB6826D00FBA008903E9 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6726D00FBA008903E9 /* URLImage.swift */; };
+		745FAB6826D00FBA008903E9 /* ImageLoaderAndCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6726D00FBA008903E9 /* ImageLoaderAndCache.swift */; };
 		745FAB6B26D012B4008903E9 /* CategoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6A26D012B4008903E9 /* CategoryDetailsView.swift */; };
 		745FAB6D26D012C4008903E9 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6C26D012C4008903E9 /* PlacesViewModel.swift */; };
 		745FAB6F26D012F2008903E9 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745FAB6E26D012F2008903E9 /* Place.swift */; };
@@ -22,7 +22,12 @@
 		746A93C026CD5C670090886E /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A93BF26CD5C670090886E /* Modifiers.swift */; };
 		7499161A26F684650070BA88 /* PhotosGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7499161926F684650070BA88 /* PhotosGridView.swift */; };
 		7499161E26F6A1590070BA88 /* ImagesCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7499161D26F6A1590070BA88 /* ImagesCarouselView.swift */; };
-		74B5B9DF26F155E700DBCF8D /* PlaceViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B5B9DE26F155E700DBCF8D /* PlaceViewHeader.swift */; };
+		74A7AFB92709DA2F003C1625 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A7AFB82709DA2F003C1625 /* ServiceAPI.swift */; };
+		74A7AFBB2709DC13003C1625 /* PlacesServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A7AFBA2709DC13003C1625 /* PlacesServiceAPI.swift */; };
+		74A7AFBE2709E98D003C1625 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A7AFBD2709E98D003C1625 /* Helpers.swift */; };
+		74A7AFC12709EB1E003C1625 /* PopularEatPlaceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A7AFC02709EB1E003C1625 /* PopularEatPlaceCard.swift */; };
+		74A7AFC32709EB2C003C1625 /* PopularPlaceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A7AFC22709EB2C003C1625 /* PopularPlaceCard.swift */; };
+		74A7AFC62709EC80003C1625 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A7AFC52709EC80003C1625 /* URLImage.swift */; };
 		74BBA81426CB2C91005C03FF /* Toronto_ExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BBA81326CB2C91005C03FF /* Toronto_ExplorerApp.swift */; };
 		74BBA81626CB2C91005C03FF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BBA81526CB2C91005C03FF /* HomeView.swift */; };
 		74BBA81826CB2C92005C03FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74BBA81726CB2C92005C03FF /* Assets.xcassets */; };
@@ -36,7 +41,7 @@
 		744F2AD826F2D98D0031C0C3 /* Toronto-Explorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Toronto-Explorer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		745ACC7F26EBA2AE00248E36 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		745FAB6526CFFED0008903E9 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
-		745FAB6726D00FBA008903E9 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		745FAB6726D00FBA008903E9 /* ImageLoaderAndCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderAndCache.swift; sourceTree = "<group>"; };
 		745FAB6A26D012B4008903E9 /* CategoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsView.swift; sourceTree = "<group>"; };
 		745FAB6C26D012C4008903E9 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
 		745FAB6E26D012F2008903E9 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -47,7 +52,12 @@
 		746A93BF26CD5C670090886E /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		7499161926F684650070BA88 /* PhotosGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosGridView.swift; sourceTree = "<group>"; };
 		7499161D26F6A1590070BA88 /* ImagesCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCarouselView.swift; sourceTree = "<group>"; };
-		74B5B9DE26F155E700DBCF8D /* PlaceViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewHeader.swift; sourceTree = "<group>"; };
+		74A7AFB82709DA2F003C1625 /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		74A7AFBA2709DC13003C1625 /* PlacesServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServiceAPI.swift; sourceTree = "<group>"; };
+		74A7AFBD2709E98D003C1625 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		74A7AFC02709EB1E003C1625 /* PopularEatPlaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularEatPlaceCard.swift; sourceTree = "<group>"; };
+		74A7AFC22709EB2C003C1625 /* PopularPlaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPlaceCard.swift; sourceTree = "<group>"; };
+		74A7AFC52709EC80003C1625 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		74BBA81026CB2C91005C03FF /* Toronto Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toronto Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BBA81326CB2C91005C03FF /* Toronto_ExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toronto_ExplorerApp.swift; sourceTree = "<group>"; };
 		74BBA81526CB2C91005C03FF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -71,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				745FAB6526CFFED0008903E9 /* ActivityIndicatorView.swift */,
-				74B5B9DE26F155E700DBCF8D /* PlaceViewHeader.swift */,
 				7499161D26F6A1590070BA88 /* ImagesCarouselView.swift */,
 			);
 			path = UIViews;
@@ -93,10 +102,11 @@
 				746A93B526CD526F0090886E /* CategoriesView.swift */,
 				746A93B726CD528F0090886E /* PopularPlacesView.swift */,
 				746A93B926CD52A50090886E /* PopularEatPlacesView.swift */,
-				745ACC7F26EBA2AE00248E36 /* PlaceView.swift */,
-				745FAB6A26D012B4008903E9 /* CategoryDetailsView.swift */,
-				7499161926F684650070BA88 /* PhotosGridView.swift */,
 				74305BC626F9353400F4183D /* NewPlaces.swift */,
+				74A7AFBF2709EB14003C1625 /* CardViews */,
+				745FAB6A26D012B4008903E9 /* CategoryDetailsView.swift */,
+				745ACC7F26EBA2AE00248E36 /* PlaceView.swift */,
+				7499161926F684650070BA88 /* PhotosGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,11 +123,38 @@
 		746A93BE26CD5C520090886E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				746A93BF26CD5C670090886E /* Modifiers.swift */,
-				745FAB6726D00FBA008903E9 /* URLImage.swift */,
+				74A7AFBD2709E98D003C1625 /* Helpers.swift */,
 				745FAB7226D02BCE008903E9 /* NavigationLazyView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		74A7AFBC2709E979003C1625 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				74A7AFB82709DA2F003C1625 /* ServiceAPI.swift */,
+				74A7AFBA2709DC13003C1625 /* PlacesServiceAPI.swift */,
+				745FAB6726D00FBA008903E9 /* ImageLoaderAndCache.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		74A7AFBF2709EB14003C1625 /* CardViews */ = {
+			isa = PBXGroup;
+			children = (
+				74A7AFC02709EB1E003C1625 /* PopularEatPlaceCard.swift */,
+				74A7AFC22709EB2C003C1625 /* PopularPlaceCard.swift */,
+			);
+			path = CardViews;
+			sourceTree = "<group>";
+		};
+		74A7AFC42709EC63003C1625 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				74A7AFC52709EC80003C1625 /* URLImage.swift */,
+				746A93BF26CD5C670090886E /* Modifiers.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		74BBA80726CB2C91005C03FF = {
@@ -139,9 +176,11 @@
 		74BBA81226CB2C91005C03FF /* Toronto Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				74A7AFBC2709E979003C1625 /* Service */,
 				746A93BD26CD59FC0090886E /* Models */,
 				745FAB7126D01E5C008903E9 /* ViewModels */,
 				746A93BE26CD5C520090886E /* Helpers */,
+				74A7AFC42709EC63003C1625 /* UIComponents */,
 				745FAB6426CFFEBD008903E9 /* UIViews */,
 				746A93B426CD51920090886E /* Views */,
 				744F2AD826F2D98D0031C0C3 /* Toronto-Explorer-Info.plist */,
@@ -234,9 +273,12 @@
 				74305BC726F9353400F4183D /* NewPlaces.swift in Sources */,
 				745FAB6D26D012C4008903E9 /* PlacesViewModel.swift in Sources */,
 				74BBA81626CB2C91005C03FF /* HomeView.swift in Sources */,
-				745FAB6826D00FBA008903E9 /* URLImage.swift in Sources */,
+				74A7AFBE2709E98D003C1625 /* Helpers.swift in Sources */,
+				745FAB6826D00FBA008903E9 /* ImageLoaderAndCache.swift in Sources */,
+				74A7AFBB2709DC13003C1625 /* PlacesServiceAPI.swift in Sources */,
+				74A7AFC12709EB1E003C1625 /* PopularEatPlaceCard.swift in Sources */,
+				74A7AFB92709DA2F003C1625 /* ServiceAPI.swift in Sources */,
 				746A93B626CD526F0090886E /* CategoriesView.swift in Sources */,
-				74B5B9DF26F155E700DBCF8D /* PlaceViewHeader.swift in Sources */,
 				746A93C026CD5C670090886E /* Modifiers.swift in Sources */,
 				746A93BA26CD52A50090886E /* PopularEatPlacesView.swift in Sources */,
 				7499161E26F6A1590070BA88 /* ImagesCarouselView.swift in Sources */,
@@ -245,9 +287,11 @@
 				745FAB6B26D012B4008903E9 /* CategoryDetailsView.swift in Sources */,
 				74BBA81426CB2C91005C03FF /* Toronto_ExplorerApp.swift in Sources */,
 				74BBA82226CB386D005C03FF /* Category.swift in Sources */,
+				74A7AFC32709EB2C003C1625 /* PopularPlaceCard.swift in Sources */,
 				746A93B826CD528F0090886E /* PopularPlacesView.swift in Sources */,
 				745FAB7326D02BCE008903E9 /* NavigationLazyView.swift in Sources */,
 				7435A86E26FA4FBE0013204D /* PopularPlacesViewModel.swift in Sources */,
+				74A7AFC62709EC80003C1625 /* URLImage.swift in Sources */,
 				745ACC8026EBA2AE00248E36 /* PlaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -361,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

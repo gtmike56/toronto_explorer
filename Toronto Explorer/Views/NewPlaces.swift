@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct NewPlaces: View {
-    
     @ObservedObject var viewModel: PlacesViewModel
     
     init() {
-        self.viewModel = PlacesViewModel(name: "New")
+        self.viewModel = PlacesViewModel(categoryName: "New")
     }
     
     var body: some View {
         VStack {
             HStack() {
-                Text("New Places").font(.system(size: 15, weight: .bold))
+                Text("New Places")
+                    .font(Palette.HomeScreenPalette.Fonts.sectionTitle)
                 Spacer()
             }.padding()
             if viewModel.isLoading {
@@ -31,7 +31,7 @@ struct NewPlaces: View {
                         .frame(width: 55, height: 55)
                         .foregroundColor(.orange)
                     Text(viewModel.errorMessage)
-                        .font(.system(size: 17, weight: .heavy))
+                        .font(Palette.HomeScreenPalette.Fonts.errorMessage)
                 }
                 .padding()
             } else {
@@ -48,19 +48,19 @@ struct NewPlaces: View {
                                     .cornerRadius(5)
                                 VStack(alignment: .leading, spacing: 5) {
                                     HStack {
-                                        Text(newPlace.name).font(.system(size: 17, weight: .bold))
-                                        Image(systemName: viewModel.getimageName(category: newPlace.category))
-                                            .font(.system(size: 15))
-                                    }
+                                        Text(newPlace.name)
+                                        Image(systemName: Helpers.getSystemImageName(category: newPlace.category))
+                                    }.font(Palette.HomeScreenPalette.Fonts.placeTitle)
+                                    
                                     Text(newPlace.description)
-                                        .font(.system(size: 12, weight: .regular))
+                                        .font(Palette.HomeScreenPalette.Fonts.placeDescription)
                                         .lineLimit(5)
                                         .multilineTextAlignment(.leading)
-                                }.foregroundColor(Color.primary)
+                                }
                             }.padding(5)
                         }
-                    }
-                    .modifier(CardModifier())
+                    }.buttonStyle(.plain)
+                        .modifier(CardModifier())
                 }.padding([.bottom, .horizontal])
             }
         }

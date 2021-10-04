@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct CategoriesView: View {
-    
     let categories: [Category] = [.init(name: "Art", systemImage: "paintpalette.fill"),
-                                    .init(name: "Parks", systemImage: "leaf.fill"),
-                                    .init(name: "Food", systemImage: "mappin.circle.fill"),
-                                    .init(name: "Events", systemImage: "music.mic"),
-                                    .init(name: "Sport", systemImage: "sportscourt.fill")]
+                                  .init(name: "Parks", systemImage: "leaf.fill"),
+                                  .init(name: "Food", systemImage: "mappin.circle.fill"),
+                                  .init(name: "Events", systemImage: "music.mic"),
+                                  .init(name: "Sport", systemImage: "sportscourt.fill")]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -32,13 +31,11 @@ struct CategoriesView: View {
                                 .shadow(color: .orange, radius: 2, x: 2, y: 4)
                         }
                         Text(category.name)
-                            .font(.system(size: 15, weight: .bold))
+                            .font(Palette.HomeScreenPalette.Fonts.sectionTitle)
                             .multilineTextAlignment(.center)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color.white)
                     }
                 }
-                
-                
             }.padding(.horizontal)
         }
     }

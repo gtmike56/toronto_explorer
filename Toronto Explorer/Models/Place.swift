@@ -7,14 +7,16 @@
 
 import Foundation
 
+typealias imageURL = String
+
 struct Place: Decodable, Hashable {
     let name: String
-    let thumbnail: String
+    let thumbnail: imageURL
     let description: String
     let category: String
     let latitude: Double
     let longitude: Double
     let rating: Double
-    let photos: [String]
+    let photos: [imageURL]
     let cuisine: String?
 }

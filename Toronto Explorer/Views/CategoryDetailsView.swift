@@ -8,33 +8,26 @@
 import SwiftUI
 
 struct CategoryDetailsView: View {
-    
     private let categoryName: String
     @ObservedObject var viewModel: PlacesViewModel
     
     init(name: String) {
         self.categoryName = name
-        self.viewModel = PlacesViewModel(name: name)
+        self.viewModel = PlacesViewModel(categoryName: categoryName)
     }
     
     var body: some View {
-        
         ZStack {
             if viewModel.isLoading {
                 ActivityIndicatorView()
-            } else if viewModel.errorMessage != "" || (viewModel.places.isEmpty &&  viewModel.errorMessage == "") {
+            } else if viewModel.errorMessage != "" {
                 VStack {
                     Image(systemName: "exclamationmark.triangle.fill")
                         .resizable()
                         .frame(width: 55, height: 55)
                         .foregroundColor(.orange)
-                    if viewModel.errorMessage == "" {
-                        Text("Sorry, No places yet for that category")
-                            .font(.system(size: 17, weight: .heavy))
-                    } else {
-                        Text(viewModel.errorMessage)
-                            .font(.system(size: 17, weight: .heavy))
-                    }
+                    Text("Sorry, No places yet for that category")
+                        .font(Palette.CategoriesViewPalette.Fonts.error)
                 }
                 .padding()
             } else {
@@ -48,25 +41,22 @@ struct CategoryDetailsView: View {
                                     .scaledToFill()
                                 HStack() {
                                     Text(place.name)
-                                        .font(.system(size: 17, weight: .medium))
                                         .lineLimit(1)
                                     Image(systemName: "star.fill")
-                                        .font(.system(size: 15))
+                                    
                                     Text("\(place.rating, specifier: "%.1f")")
-                                        .font(.system(size: 17, weight: .medium))
                                 }
+                                .font(Palette.CategoriesViewPalette.Fonts.title)
                                 .padding(.bottom, 10)
-                                .foregroundColor(Color.primary)
                             }
                             .modifier(CardModifier())
                             .padding()
-                        }
+                        }.buttonStyle(.plain)
                         
                     }
                 }
             }
         }.navigationBarTitle(categoryName, displayMode: .inline)
-        
     }
 }
 

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PhotosGridView: View {
-    
     var place: Place
     
     @State var isFullScreenPhoto = false
@@ -23,7 +22,6 @@ struct PhotosGridView: View {
                             Color.black.ignoresSafeArea()
                             
                             ImagesCarouselView(place: place, selectedImageIndex: selectedImageIndex)
-                                
                             
                             Button {
                                 isFullScreenPhoto.toggle()
@@ -35,8 +33,8 @@ struct PhotosGridView: View {
                             }
                         }
                     }.opacity(isFullScreenPhoto ? 1 : 0)
-
-
+                
+                
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: proxy.size.width/3-1, maximum: 300), spacing: 1)], spacing: 1) {
                     ForEach(place.photos, id: \.self) { image in
                         Button {
@@ -48,17 +46,15 @@ struct PhotosGridView: View {
                                 .frame(width: proxy.size.width/3-5, height: proxy.size.width/3-5)
                                 .clipped()
                         }
-
                     }
                 }
             }
         }
-        
     }
 }
 
 struct PhotosGridView_Preview: PreviewProvider {
     static var previews: some View {
-        PhotosGridView(place: .init(name: "", thumbnail: "", description: "", category: "", latitude: 0.0, longitude: 0.0, rating: 0.0, photos: [], cuisine: ""))
+        PhotosGridView(place: .init(name: "Borscht", thumbnail: "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg", description: "Test Description \n\n\n Yay \n\n\n\n\n Test", category: "Test", latitude: 43.642567, longitude: -79.387054, rating: 3.5, photos: ["https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png", "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg"], cuisine: "Ukranian"))
     }
 }

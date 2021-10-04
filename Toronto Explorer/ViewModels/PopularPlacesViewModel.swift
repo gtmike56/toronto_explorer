@@ -7,66 +7,58 @@
 
 import SwiftUI
 
-class PopularPlacesViewModel: ObservableObject {
-    
+final class PopularPlacesViewModel: ObservableObject {
     @Published var isLoading = true
     @Published var places = [Place]()
     @Published var errorMessage = ""
+    let categories: [CategoryName]
     
     var dispatchGroup = DispatchGroup()
     
-    init(isEatingPlace: Bool) {
-                
-        if isEatingPlace {
+    init(categories: [CategoryName]) {
+        self.categories = categories
+        fetchData()
+    }
+    
+    func fetchData(){
+        categories.forEach { category in
             self.dispatchGroup.enter()
-            getPlaces(name: "Food")
-        } else {
-            self.dispatchGroup.enter()
-            getPlaces(name: "Art")
-            self.dispatchGroup.enter()
-            getPlaces(name: "Parks")
-            self.dispatchGroup.enter()
-            getPlaces(name: "Events")
-            self.dispatchGroup.enter()
-            getPlaces(name: "Sport")
-        }
-        self.dispatchGroup.notify(queue: .main) {
-            
-            if self.places.isEmpty {
-                self.errorMessage = "Sorry, no places found"
-                self.isLoading = false
-            } else {
-                self.places.sort {
-                    $0.rating > $1.rating
+            PlacesServiceAPI.placesServiceAPI.fetchPlaces(category: category.rawValue) { result in
+                switch(result) {
+                case .failure(.badURL):
+                    print("Invalid URL")
+                case .failure(.noData):
+                    print("No data recieved from API call")
+                case .failure(.jsonError):
+                    print("Invalid json")
+                case .failure(.requestError):
+                    print("Request Error")
+                case .success(let fetchedPlaces):
+                    DispatchQueue.main.async {
+                        let tempPlaces = fetchedPlaces
+                        self.places.append(contentsOf: tempPlaces)
+                        self.dispatchGroup.leave()
+                    }
+                }
+            }
+            self.dispatchGroup.notify(queue: .main) {
+                if self.places.isEmpty {
+                    self.errorMessage = "Sorry, no places found"
+                } else {
+                    self.places.sort {
+                        $0.rating > $1.rating
+                    }
                 }
                 self.isLoading = false
-                self.places = Array(self.places.prefix(4))
-                //self.places.shuffle()
             }
-
         }
     }
     
-    func getPlaces(name: String) {
+    func reloadData(){
+        self.isLoading = true
+        self.errorMessage = ""
+        self.places = []
         
-        guard let url = URL(string: "https://raw.githubusercontent.com/gtmike56/gtmike56.github.io/main/Toronto-Explorer/\(name)/\(name.lowercased()).json") else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            guard let data = data else {
-                return
-            }
-            DispatchQueue.main.async {
-                do {
-                    self.dispatchGroup.leave()
-                    let tempPlaces = try JSONDecoder().decode([Place].self, from: data)
-                    self.places.append(contentsOf: tempPlaces)
-                } catch {
-                    print(error)
-                }
-            }
-
-        }.resume()
+        fetchData()
     }
-    
 }
